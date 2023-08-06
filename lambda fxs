@@ -1,0 +1,32 @@
+# Lambda functions are small anonymous function
+# Can take any num of args but can only have one expression
+# syntax--> lambda arguments : expression
+
+x = lambda a : a + 10  # add 10 to arg "a"
+print(x(5))  # 5 is the arg
+
+x = lambda a, b : a * b  # multiply "a" and "b"
+print(x(5, 6))  # args are 5 and 6
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+
+# useful for anon function inside another function
+# ex: one fx def that takes one arg, and that arg is * unknown num\
+# Use lambda fxs when anon fx is req'd for a short period of time.
+def func(n):
+	return lambda a : a * n
+
+quadrupleit = func(8)
+
+print(quadrupleit(4))
+
+#use same fx definition to make both functions
+def funky(n):
+  return lambda a : a * n
+
+doublit= funky(2)
+triplit = funky(3)
+
+print(doublit(10))
+print(triplit(20))

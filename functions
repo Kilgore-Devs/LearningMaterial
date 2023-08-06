@@ -1,0 +1,84 @@
+# a funstion is a block of code that only runs when called
+# you pass data into a function, the passed data is called parameters aka par is the variable inside the () in the fx definition.
+# function will return data as the result
+def function():  #defines function
+	print("Hello mother functioner")
+
+function()  #this calls the function
+
+# Arguements can be passed into functions aka args. arg is the value that is sent to the function when it is called.
+
+def new_function(fx):
+	print(fx + "Something")
+
+
+new_function("Yes ")
+new_function("oO ")
+new_function("Here's ")
+
+def this_fx(firstn, lastn):
+	print(firstn + " " + lastn)
+
+this_fx("Brandon", "Codes")
+# this_fx("Brandon")<---this wont work because the fx expects 2 args and only gave it 1
+
+
+def fxs(*cars):   #use * if num of args is unknown use two ** if you dont know num  kw args
+	print("The car I want to own is " + cars[2]) # recieved a tuple(starts at 0) and returns value
+
+fxs("BMW M3 Comp", "Ram TRX", "Lambooo") # 0, 1 ,2---will return Lamboo
+
+
+def uhfx(kid1, kid2, kid3):  # defines fx uhfx as kid1, 2..
+	print("The youngest of my beautiful kids is " + kid3 +"!")  # prints The young...is kid3
+
+
+uhfx(kid1 = "Addison", kid3 = "Briella", kid2 = "Melanie")  #uses keywords and =, means it doesnt matter the order
+
+def whereyurfrom(country = "Murica"):  # sets default par to function
+	print("I am from " + country)
+
+
+whereyurfrom("UK")  # whats returned when fx is called
+whereyurfrom("Mexico")
+whereyurfrom("EU")
+whereyurfrom()  #return default parameter
+
+
+# can use any type of data as arg..even lists
+def thislist(fastfood):
+	for x in fastfood:
+		print(x)
+
+menuitems = ["Burgers", "Shakes", "Fries"]
+
+thislist(menuitems)
+
+
+# Return Values--to let a fx return a value, use return statement
+def idk(x):
+	return 5 * x
+
+
+print(idk(1))
+print(idk(2))
+print(idk(3))
+
+def empty():  # use pass on blank fxs to avoid errors
+	pass
+
+
+# Recursion - a fx can call itself
+# means you can loop through data to reach a result *caution on never terminating/infinite
+def recursion(k):
+    if(k > 0):
+        result = k + recursion(k - 1)
+        print(result)
+    else:
+        result = 0
+    return result
+
+
+print("\n\nRecursion Results displayed here")
+recursion(5)
+

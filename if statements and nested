@@ -1,0 +1,42 @@
+a = 33
+b = 33
+print ("a is greater") if a > b else print("they are =") if a == b else print ("b is greater")
+
+a = 5
+b = 6
+c = 7
+if a > b and c > a:  #if else
+	print("Both conditions are True")
+else:
+	print("Both conditions are NOT True")
+
+if a > b or a > c:  #single line
+	print("At least one of the conditions is True")
+
+if not a > b:
+	print("a is NOT greater than b")
+
+d = 33  #elif
+e = 33
+if e > d:
+  print("e is greater than d")
+elif e == d:
+    print("e and d are equal")
+else:
+    print("de is greater than d")
+
+
+x = 41  #nested examples
+
+if x > 10:
+  print("Above ten,")
+  if x > 20:
+    print("and also above 20!")
+  else:
+    print("but not above 20.")
+
+h = 33  #pass statement
+i = 200
+if b > a:
+	pass
+if 5 > 2: print("Five is greater than two!") #shorthad one line

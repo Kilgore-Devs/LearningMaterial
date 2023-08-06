@@ -1,0 +1,62 @@
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:  #loops through fruits
+    print(x)
+
+for x in "banana":
+    print(x)  #loops through banana
+
+yums = ["food", "treats", "candy"]
+for x in yums:
+    print(x)
+    if x == "treats":
+       break
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+
+for x in "banana":
+    print(x)
+
+yums = ["food", "treats", "candy"]
+for y in yums:
+    print(y)
+    if y == "treats":
+       break  #stops at break
+
+stuff = ["this", "is", "dumb", "something"]
+for z in stuff:  #for loop
+  if z == "dumb":  #if z is equal to dumb,
+    continue
+  print(z)
+
+for h in range(6):  #range() return a seq of nums, starts at 0 and ends at spec num
+	print(h)
+
+for i in range(3, 12):  #range() from 3-12 and prints starting at 3
+	print(i)
+
+for j in range(15, 50, 5):  #set rang 15-50 and inc by 5 then print
+	print(j)
+
+# else in loops
+for k in range(10):  #set range and prints to 10
+	print(k)
+else:
+	print("All done!")  # prints all done after the end of range/9
+
+for l in range(5):  #sets a range of 5
+	if l == 3: break  #if l equals 3
+	print(l)
+else:
+	print("Really, all done now..")
+
+#nested loops - iner loop is executed one time for each iteration of outer loop
+color = ["red", "white", "blue"]
+flag = ["stars", "stripes", "country"]
+
+for v in color:
+	for w in flag:
+		print(v, w)  #printing each w for v, then repeat
+for x in [0, 1, 2]:
+	pass  #use pass to avoid unexpected errors if loop is emtpy

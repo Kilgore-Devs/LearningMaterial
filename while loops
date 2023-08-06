@@ -1,0 +1,21 @@
+h = 20
+i = 0
+j = 10
+x = 2
+
+while i < h:
+  print(i)
+  if i == 19:
+    break  #stops loop even when condition is true
+  i += 2
+else:  #dont need the else print here, just added it to demo else
+	print("'i' is no longer less than 'h'.")
+
+
+while x < j: # this says while x is less than 10, add.5, if x=9 stop and continue(skip j/10 til x > j/10, and print
+  x += .5
+  if x == j:
+    continue
+  print(x)
+else:
+	print("'x' is no longer less than 'j'.")
