@@ -1,0 +1,86 @@
+class Ninja:  # creates class named ninja with a property named x
+    x = 5
+
+
+ninjastar = Ninja()  # uses class to create object named ninjastar
+print(ninjastar.x)  # prints value of x
+
+
+class Car:  # creates class named Car
+    def __init__(self, Model, year):  # use __init__() to assign values for Model and Year.
+        self.Model = Model
+        self.year = year
+
+
+p1 = Car("Ram", 2017)
+# above is without __str__(),
+# below uses __str__(). If __str__() is not used, the string representation of the object is returned.
+print(p1.Model)
+print(p1.year)
+
+
+class Dude:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def myfunc(self):
+        print("Hello. My name is " + self.name + ". How are you?")
+
+
+p1 = Dude("Brandon", 36)
+p1.myfunc()
+
+
+class Truck:
+    def __init__(whatever, year, make, model):
+        """
+        The `__init__()` function is called when the class is initiated.
+        `whatever` is a reference to the current instance of the class (self),
+        `year`, `make`, and `model` are the arguments passed when creating the object.
+        """
+        whatever.year = year
+        whatever.make = make
+        whatever.model = model
+
+    def newfunc(whatever):
+        """
+        `newfunc()` is a method that belongs to the object.
+        `whatever` is a reference to the current instance of the class (self).
+        It prints the values of `year`, `make`, and `model` belonging to the object.
+        """
+        print("This is a", whatever.year, whatever.make, whatever.model)
+
+
+p2 = Truck(2017, "Ram", 1500)
+p2.newfunc()
+p2.year = 2023  # change year (you can modify any properties this way)
+p2.newfunc()  # outputs modified p2
+
+
+class Ifempty:
+    pass
+
+
+print(Ifempty)  # This is not needed, just an example. Prints '<class '__main__.Ifempty'>'
+
+
+class Truck(Ninja):
+    def __int__(a, x):
+        """
+        Overrides the __init__ method of the parent `Ninja` class.
+        `a` is a reference to the current instance of the class (self),
+        `x` is the argument passed when creating the object.
+        """
+        super().__init__(x)  # calls the __init__ method of the parent class `Ninja`.
+        a.x = x
+
+    def afx(a):
+        """
+        Prints the value of the `x` property.
+        """
+        print(a.x)
+
+
+p3 = Truck()
+p3.afx()
