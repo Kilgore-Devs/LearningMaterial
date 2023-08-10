@@ -35,3 +35,4 @@ thefam = {
 
 print(thefam["kid1"])  # accesses kid1 from thefam dictionary
 print(mycars["car3"]["model"])  # accesses car3 model
+print(mycars.get("car1"))
