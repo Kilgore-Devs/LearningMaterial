@@ -40,3 +40,4 @@ if os.path.exists("delete2.txt"):
 else:
     print("The file does not exist")
 
+# os.rmdir("foldername") # use this to remove an empty folder
